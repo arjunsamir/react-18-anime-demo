@@ -1,0 +1,56 @@
+.wizard {
+
+  --wiz-window-radius: #{scale(--base-radius, 2)};
+  --wix-max-width: 64rem;
+  --wiz-spacing: #{scale(--base-spacing, 2)};
+  
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(black, 0.025);
+  position: relative;
+
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    height: 100%;
+    width: 100%;
+  }
+
+  &__window {
+    background-color: var(--default-surface-color);
+    width: 100%;
+    max-width: var(--wix-max-width);
+    padding: 6.4rem 4.8rem;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: var(--wiz-window-radius);
+    box-shadow: var(--shadow-z-1);
+  }
+
+  &__content {
+    & > h2 {
+      font-size: 4.8rem;
+      margin-bottom: var(--wiz-spacing);
+    }
+
+    & > p {
+      font-size: 1.8rem;
+      margin-bottom: scale(--wiz-spacing, 1.25);
+    }
+    
+    & > div:not(:last-child) {
+      margin-bottom: var(--wiz-spacing);
+    }
+
+  }
+}

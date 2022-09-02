@@ -1,0 +1,99 @@
+.text-field {
+
+  // Use these to customize the component
+  --tf-bg-color: rgb(238, 238, 238);
+  --tf-padding-x: 1.6rem;
+  --tf-padding-y: 1.2rem;
+  --tf-padding: var(--tf-padding-y) var(--tf-padding-x);
+  --tf-font-size: 1.8rem;
+  --tf-line-height: 1.6;
+  --tf-max-width: 40rem;
+
+  width: 100%;
+  max-width: var(--tf-max-width);
+
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    font-weight: 600;
+    margin-bottom: var(--base-spacing);
+    color: var(--default-heading-color);
+  }
+
+  &__field {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--tf-bg-color);
+    padding: var(--tf-padding);
+    border-radius: var(--base-radius);
+  }
+
+  &__input {
+    border: none;
+    display: block;
+    font-size: var(--tf-font-size);
+    line-height: var(--tf-line-height);
+    font-family: inherit;
+    width: 100%;
+    background: none;
+    margin: 0;
+    padding: 0;
+
+    &:focus, &:focus-visible, &:active {
+      outline: none;
+    }
+
+    &-trailing {
+      position: absolute;
+      right: var(--tf-padding-x);
+      cursor: pointer;
+    }
+
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    padding: var(--tf-padding);
+    overflow: hidden;
+    background-color: var(--tf-bg-color);
+
+    p {
+      font-size: var(--tf-font-size);
+      line-height: var(--tf-line-height);
+      position: absolute;
+      display: flex;
+
+      span {
+        display: block;
+      }
+    }
+  }
+
+  &__messages {
+    max-height: 0;
+    overflow: hidden;
+    transition: 1s ease max-height;
+  }
+
+  &__error {
+    padding: scale(--base-spacing, 0.75) var(--tf-padding-x);
+    p {
+      line-height: 1.2;
+      font-size: scale(--tf-font-size, 0.75);
+      font-weight: 600;
+    }
+  }
+
+}

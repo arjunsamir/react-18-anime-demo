@@ -1,0 +1,3 @@
+@function scale($custom-property, $factor) {
+  @return calc(var(#{$custom-property}) * $factor);
+}

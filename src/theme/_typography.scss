@@ -1,0 +1,17 @@
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--default-body-color);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Questrial', 'Inter', sans-serif;
+  font-weight: 400;
+  color: var(--default-heading-color);
+}
+
+p {
+  line-height: 1.6;
+}
