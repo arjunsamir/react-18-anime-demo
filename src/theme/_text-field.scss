@@ -8,6 +8,8 @@
   --tf-font-size: 1.8rem;
   --tf-line-height: 1.6;
   --tf-max-width: 40rem;
+  --tf-border-color: rgb(210, 210, 210);
+  --tf-border-style: 2px solid;
 
   width: 100%;
   max-width: var(--tf-max-width);
@@ -15,6 +17,10 @@
   display: flex;
   flex-direction: column;
 
+  &.error {
+    --tf-border-color: var(--error-color);
+  }
+  
   &__label {
     font-weight: 600;
     margin-bottom: var(--base-spacing);
@@ -29,7 +35,9 @@
     align-items: center;
     background-color: var(--tf-bg-color);
     padding: var(--tf-padding);
+    border: var(--tf-border-style) var(--tf-border-color);
     border-radius: var(--base-radius);
+    overflow: hidden;
   }
 
   &__input {

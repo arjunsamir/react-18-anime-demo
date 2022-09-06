@@ -13,8 +13,8 @@
 
 
   // Some theme properties
-  --base-spacing: var(--cozy);
-  --base-radius: var(--boxy);
+  --base-spacing: var(--compact);
+  --base-radius: var(--round);
 
   // Font Colors
   --default-heading-color: #222;
@@ -22,6 +22,11 @@
 
   // Object Colors
   --default-surface-color: #fff;
+
+  // State Colors
+  --error-color: red;
+  --success-color: green;
+  --warning-color: yellow;
 
   // Shadows
   --shadow-z-1:
